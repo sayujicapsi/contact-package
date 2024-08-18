@@ -33,8 +33,8 @@ class ContactController extends Controller
         try {
             $s = Session::put('tt', 'dsfsdfs');
             //dd(Auth::guard('web')->user());
-            $this->service->store($request);
-            //Contact::store($request);
+            //$this->service->store($request);
+            Contact::store($request);
             return redirect()->route('contact.view')->with('success', 'Thank you for contacting us. We will get back to you soon.');
         } catch (Throwable $th) {
             report($th);
