@@ -3,6 +3,7 @@
 namespace Sxp\Contact\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Sxp\Contact\Services\ContactService;
 
 class ContactServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,10 @@ class ContactServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/contact.php', 'contact'
         );
+
+        $this->app->singleton('contact-service', function ($app) {
+            return new ContactService();
+        });
     }
 
     /**

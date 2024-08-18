@@ -4,6 +4,8 @@ namespace Sxp\Contact\Http\Controllers;
 
 use Throwable;
 use Illuminate\Http\Request;
+
+use Sxp\Contact\Facades\Contact;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -32,6 +34,7 @@ class ContactController extends Controller
             $s = Session::put('tt', 'dsfsdfs');
             //dd(Auth::guard('web')->user());
             $this->service->store($request);
+            //Contact::store($request);
             return redirect()->route('contact.view')->with('success', 'Thank you for contacting us. We will get back to you soon.');
         } catch (Throwable $th) {
             report($th);

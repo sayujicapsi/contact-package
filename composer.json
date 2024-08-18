@@ -15,5 +15,15 @@
             "Sxp\\Contact\\": "src/"
             
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sxp\\Contact\\Providers\\ContactServiceProvider"
+            ],
+            "aliases": {
+                "Contact": "Sxp\\Contact\\Facades\\Contact"
+            }
+        }
     }
 }
