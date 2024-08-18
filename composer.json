@@ -1,0 +1,19 @@
+{
+    "name": "sxp/contact",
+    "description": "This will send email and save query to database",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sxp"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sxp\\Contact\\": "src/"
+            
+        }
+    }
+}
